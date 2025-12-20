@@ -7,11 +7,7 @@ type SVGWithColor = {
 
 const TmdbLogo = (props: SVGWithColor) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 190.24 81.52"
-      {...props}
-    >
+    <svg viewBox="0 0 190.24 81.52" {...props}>
       <defs>
         <linearGradient
           id="linear-gradient"
