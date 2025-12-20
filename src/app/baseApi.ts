@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { errorHandler } from "@/common/variables";
 import { setLoadingStatus } from "@/features/api";
 
 export const baseApi = createApi({
