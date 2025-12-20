@@ -7,7 +7,11 @@ const ThemeSwitch = () => {
 
   return (
     <div className={s.themeSwitch} onClick={toggleTheme}>
-      {theme === "dark" ? <MoonLogo className={s.moonLogo} /> : <SunLogo className={s.sunLogo} />}
+      {theme === "dark" ? (
+        <MoonLogo className={s.moonLogo} />
+      ) : (
+        <SunLogo className={s.sunLogo} />
+      )}
     </div>
   );
 };
