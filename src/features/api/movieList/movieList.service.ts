@@ -26,7 +26,7 @@ export const movieListApi = baseApi.injectEndpoints({
     getFilmById: build.query<T_MovieAllInfo, string>({
       providesTags: ["SearchMovie"],
       query: (movieId) => ({
-        url: `movie/${movieId}?language=en-US'`,
+        url: `movie/${movieId}?language=en-US`,
       }),
       transformResponse: validateResponseHandler(movieAllInfo),
     }),
@@ -55,7 +55,7 @@ export const movieListApi = baseApi.injectEndpoints({
     >({
       providesTags: ["MoviesList"],
       query: ({ sort, rating, page, genres }) => ({
-        url: `discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=${sort}&vote_average.gte=${rating[0]}&vote_average.lte=${rating[1]}&&with_genres=${genres}`,
+        url: `discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=${sort}&vote_average.gte=${rating[0]}&vote_average.lte=${rating[1]}&with_genres=${genres}`,
       }),
       transformResponse: validateResponseHandler(movieListResponseSchema),
     }),
