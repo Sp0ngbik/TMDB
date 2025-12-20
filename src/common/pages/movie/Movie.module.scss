@@ -1,0 +1,91 @@
+.movieWelcomeSection {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      #000 0%,
+      #000 30%,
+      rgba(0, 0, 0, 0.85) 60%
+    );
+  }
+
+  & .backDropImage {
+    position: absolute;
+    z-index: 1;
+    width: 90%;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  & .movieDescription {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1400px;
+    margin: 150px 0;
+    gap: 40px;
+    z-index: 3;
+    & img {
+      outline: 5px solid var(--color-light-900);
+      border-radius: 30px;
+      width: 300px;
+      aspect-ratio: 2/3;
+    }
+  }
+  & .movieTitle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 10px;
+    & h3 {
+      margin: 0;
+    }
+  }
+
+  & .movieInfo {
+    color: var(--color-dark-100);
+    margin: 20px 0 20px 20px;
+    font-size: var(--font-size-xxl);
+
+    & .infoBlock {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: var(--font-size-xl);
+      & svg {
+        margin-left: 10px;
+      }
+    }
+    & .genreButtons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: var(--font-size-l);
+    }
+    & .movieReview {
+      display: flex;
+      margin: 10px 0;
+      flex-direction: column;
+      font-size: var(--font-size-l);
+
+      & p {
+        font-size: var(--font-size-xxl);
+        color: var(--color-dark-100);
+      }
+      & span {
+        margin: 10px 0;
+        text-align: justify;
+      }
+    }
+  }
+}

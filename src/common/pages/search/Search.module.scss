@@ -1,0 +1,48 @@
+.searchSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  & .searchBlock {
+    margin-left: 25px;
+    width: 35%;
+    align-items: flex-start;
+    align-content: flex-start;
+    & h3 {
+      font-size: var(--font-size-xxl);
+      margin: 20px 0;
+    }
+  }
+
+  & .searchContainer {
+    width: 100%;
+    display: flex;
+    margin: 0 0 10px;
+    justify-content: center;
+  }
+
+  & .filmCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  & .infoText {
+    font-size: var(--font-size-l);
+    margin-left: 25px;
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+    word-break: break-all;
+  }
+
+  & .searchResult {
+    display: flex;
+    flex-wrap: wrap;
+    word-break: break-all;
+    width: 90vw;
+    color: var(--color-dark-100);
+    font-size: var(--font-size-xxl);
+  }
+}

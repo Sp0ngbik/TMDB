@@ -1,0 +1,24 @@
+.castBlock {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 90px;
+
+  & .castInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & .actorImageSkeleton {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  & .actorNameSkeleton {
+    width: 200px;
+  }
+  & .actorCharacter {
+    width: 50px;
+  }
+}

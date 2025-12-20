@@ -1,0 +1,48 @@
+.categorySection {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+
+  & p {
+    font-size: var(--font-size-xxl);
+    text-decoration: underline;
+    text-align: start;
+    margin: 10px 0;
+  }
+
+  & .categoryFilm {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  & .viewBlock {
+    font-size: var(--font-size-xxl);
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    & a {
+      text-decoration: none;
+      border-radius: 15px;
+      color: var(--color-light-900);
+      transition: 0.1s linear;
+    }
+  }
+}
+
+.separator::after {
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  background-color: var(--color-dark-900);
+  content: "";
+  bottom: 0;
+}

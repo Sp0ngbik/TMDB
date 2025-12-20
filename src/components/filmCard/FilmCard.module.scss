@@ -1,0 +1,54 @@
+.cardBody {
+  display: flex;
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 275px;
+  margin: 20px;
+  user-select: none;
+  flex-direction: column;
+  z-index: 2;
+  &:hover {
+    cursor: pointer;
+  }
+
+  & > div {
+    position: relative;
+  }
+
+  & .imageBlock {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 25px;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+      filter: brightness(80%);
+      transition: 0.1s linear;
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+  & .favoriteWrapper {
+    top: 2%;
+    left: 2%;
+    position: absolute;
+  }
+
+  & .circleRating {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  & .cardDescription {
+    font-size: var(--font-size-xl);
+    text-shadow: 0 0 2px var(--color-dark-500);
+    margin: 20px;
+    & h5 {
+      margin: 0;
+    }
+  }
+}

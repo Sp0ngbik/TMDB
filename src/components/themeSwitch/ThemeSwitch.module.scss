@@ -1,0 +1,48 @@
+.themeSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  outline: 1px solid var(--color-dark-300);
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  transition: 0.2s linear;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    background-color: var(--color-dark-500);
+    cursor: pointer;
+  }
+}
+
+.moonLogo,
+.sunLogo {
+  position: absolute;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  fill: var(--color-light-900);
+}
+
+.moonLogo {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+html[data-theme="dark"] .moonLogo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sunLogo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html[data-theme="dark"] .sunLogo {
+  opacity: 0;
+  transform: translateY(-40px);
+}

@@ -1,0 +1,30 @@
+.paginationContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+
+  & .pageButton {
+    max-height: 30px;
+    align-items: center;
+    display: flex;
+    padding: 10px 10px;
+    width: auto;
+    transition: 0.3s linear;
+    border: none;
+    border-radius: 5px;
+    margin: 0 2px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-info-100);
+    }
+  }
+  & .dotsSvg {
+    fill: var(--color-dark-900);
+  }
+  & .activeButton {
+    background-color: var(--color-info-100);
+  }
+}

@@ -1,0 +1,19 @@
+.headerBlock {
+  background-color: var(--color-dark-900);
+  position: relative;
+  box-shadow: 0 8px 10px -6px var(--color-dark-100);
+  & .headerElements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+}
+.logoBlock {
+  .logoStyle {
+    width: 120px;
+  }
+  :hover {
+    cursor: pointer;
+  }
+}

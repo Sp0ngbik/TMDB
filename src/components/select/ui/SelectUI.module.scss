@@ -1,0 +1,34 @@
+.item {
+  font-size: 13px;
+  line-height: 1;
+  color: var(--color-info-500);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 35px 0 25px;
+  position: relative;
+  user-select: none;
+  &:hover {
+  }
+  &[data-disabled] {
+    color: var(--color-dark-100);
+    pointer-events: none;
+  }
+
+  &[data-highlighted] {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--color-info-100);
+    color: var(--color-info-300);
+  }
+}
+
+.itemIndicator {
+  position: absolute;
+  right: 0;
+  width: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

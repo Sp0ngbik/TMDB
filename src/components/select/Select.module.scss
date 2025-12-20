@@ -1,0 +1,62 @@
+.trigger {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  position: relative;
+  padding: 0 15px;
+  font-size: 13px;
+  line-height: 1;
+  box-sizing: border-box;
+  height: 35px;
+  gap: 5px;
+  border: 1px solid var(--color-accent-100);
+  width: 100%;
+  background-color: var(--color-dark-700);
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-dark-300);
+  }
+
+  &[data-placeholder] {
+    color: var(--color-info-300);
+  }
+}
+
+.icon {
+  color: var(--color-accent-100);
+}
+
+.content {
+  width: var(--radix-select-trigger-width);
+  overflow: hidden;
+  background-color: var(--color-dark-900);
+  border-radius: 6px;
+  box-shadow:
+    0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  opacity: 0.9;
+}
+
+.viewport {
+  padding: 10px;
+}
+
+.label {
+  padding: 0 25px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.scrollButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  background-color: var(--color-light-100);
+  color: var(--color-accent-100);
+  cursor: default;
+}

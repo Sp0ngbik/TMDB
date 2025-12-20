@@ -1,0 +1,31 @@
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.skeletonBody {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.skeletonItem {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin: 20px;
+  width: 275px;
+}
+
+.posterStyle {
+  width: 275px;
+  aspect-ratio: 2/3;
+  user-select: none;
+}
+
+.textStyle {
+  margin: 20px 0;
+  border-radius: 8px;
+}

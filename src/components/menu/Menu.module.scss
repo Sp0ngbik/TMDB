@@ -1,0 +1,28 @@
+.menuBlock {
+  display: flex;
+
+  > a {
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-decoration: none;
+    border: none;
+    border-right: 2px solid var(--color-dark-100);
+    color: var(--color-light-900);
+    background-color: transparent;
+    font-weight: var(--font-weight-bold);
+    transition: 0.2s linear;
+
+    &:hover {
+      color: var(--color-info-700);
+      cursor: pointer;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  & .active {
+    color: var(--color-info-500);
+  }
+}

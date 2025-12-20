@@ -1,0 +1,13 @@
+.favoriteSection {
+  margin: 10px 0;
+  width: 100%;
+  & h3 {
+    font-size: var(--font-size-xxl);
+    margin: 20px;
+    color: var(--color-dark-900);
+  }
+  & .favoriteBlock {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,20 @@
+.favoriteBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 30px;
+  transition: 0.3s linear;
+  background-color: var(--color-info-900);
+  &:hover {
+    cursor: pointer;
+    background-color: var(--color-info-500);
+  }
+  & .heartStyle {
+    stroke: #d2d202;
+  }
+  & .inFavorite {
+    fill: red;
+  }
+}

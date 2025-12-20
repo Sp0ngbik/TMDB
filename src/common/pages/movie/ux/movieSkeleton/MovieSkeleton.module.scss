@@ -1,0 +1,85 @@
+.movieSkeletonSection {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 150px 0;
+  gap: 27px;
+  & .skeletonDescription {
+    display: flex;
+    width: 100%;
+    max-width: 1290px;
+    gap: 40px;
+    z-index: 3;
+  }
+  & .skeletonPoster {
+    outline: 5px solid var(--color-light-900);
+    border-radius: 30px;
+    width: 300px;
+    aspect-ratio: 2/3;
+  }
+  & .skeletonMovieInfo {
+    display: flex;
+    margin: 20px 0 20px 20px;
+    flex-direction: column;
+    width: 100%;
+
+    & .skeletonTitleSection {
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 10px;
+
+      & .skeletonTitle {
+        width: 400px;
+        height: 30px;
+      }
+      & .skeletonFavorite {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    }
+    & .infoBlock {
+      color: var(--color-dark-100);
+      font-size: var(--font-size-xl);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      & .ratingSkeleton {
+        margin-left: 10px;
+        border-radius: 50%;
+      }
+    }
+    & .skeletonGenreTitle {
+      width: 80px;
+      height: 30px;
+      margin: 26px 0 18px;
+    }
+    & .skeletonGenres {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        border-radius: 15px;
+        width: 90px;
+        height: 30px;
+      }
+    }
+    & .skeletonReviewTitle {
+      margin: 10px 0;
+      width: 70px;
+      height: 30px;
+    }
+    & .skeletonReviewText {
+      height: 120px;
+      border-radius: 15px;
+    }
+  }
+  & .skeletonBackButton {
+    display: flex;
+    span {
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.movieCollection {
+  position: relative;
+  width: 100%;
+}
+
+.buttonSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  text-wrap: nowrap;
+  padding: 20px 0 0;
+  margin: 0 auto;
+  gap: 30px;
+  & a {
+    color: var(--color-dark-900);
+  }
+}
+
+.active button {
+  background-color: var(--color-info-300);
+  color: var(--color-dark-700);
+}
+
+.movieCardSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}

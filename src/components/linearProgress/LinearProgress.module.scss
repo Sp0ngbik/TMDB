@@ -1,0 +1,30 @@
+.linearProgress {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  height: 5px;
+  background-color: var(--color-light-300);
+  content: "";
+  z-index: 98;
+  overflow: hidden;
+  bottom: 0;
+  &::before {
+    animation: linearProgressRunner 1s ease-in infinite;
+    background-color: var(--color-info-700);
+    position: absolute;
+    content: "";
+    height: 100%;
+    z-index: 99;
+    width: 30%;
+    left: 0;
+  }
+}
+
+@keyframes linearProgressRunner {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
