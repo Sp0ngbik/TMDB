@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setLoadingStatus } from "@/features/api";
-import { errorHandler } from "@/common/variables";
 
 export const baseApi = createApi({
   reducerPath: "tmdbApi",
@@ -14,7 +13,7 @@ export const baseApi = createApi({
         Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
       },
     })(args, api, extraOptions);
-    errorHandler(api, result);
+    // errorHandler(api, result);
     api.dispatch(setLoadingStatus(false));
     return result;
   },
