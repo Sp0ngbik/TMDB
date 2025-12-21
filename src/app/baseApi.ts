@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { errorHandler } from "@/common/variables";
+import { errorHandler, loaderHelpers } from "@/common/variables";
 
 export const baseApi = createApi({
   reducerPath: "tmdbApi",
   tagTypes: ["MoviesList", "SearchMovie"],
   baseQuery: async (args, api, extraOptions) => {
-    // api.dispatch(setLoadingStatus(true));
+    loaderHelpers(api, true);
     const result = await fetchBaseQuery({
       baseUrl: "https://api.themoviedb.org/3",
       headers: {
@@ -14,7 +14,7 @@ export const baseApi = createApi({
       },
     })(args, api, extraOptions);
     errorHandler(api, result);
-    // api.dispatch(setLoadingStatus(false));
+    loaderHelpers(api, false);
     return result;
   },
 
