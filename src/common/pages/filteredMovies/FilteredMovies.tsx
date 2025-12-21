@@ -22,6 +22,7 @@ const FilteredMovies = () => {
   } = useSortValues({
     genres: genresList?.genres || [],
   });
+  console.log(genresState);
   const { data, isFetching } = useGetFilteredFilmsQuery({
     page: currentPage || "1",
     sort: sortValue || "",

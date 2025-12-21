@@ -16,7 +16,7 @@ const Button = (props: T_Button) => {
     className,
     ...restProps
   } = props;
-  const buttonStyle = clsx(className, s[variant]);
+  const buttonStyle = clsx(s[variant], className);
   return (
     <Component className={buttonStyle} {...restProps}>
       {children}
