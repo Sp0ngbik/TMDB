@@ -1,15 +1,15 @@
 import { baseApi } from "@/app/baseApi.ts";
 
+import type { Genres, MovieVideo } from "@/features/api";
 import {
   type CastResponse,
   castResponseSchema,
   movieAllInfo,
   type MovieList,
-  type T_MovieAllInfo,
   movieListResponseSchema,
+  type T_MovieAllInfo,
 } from "@/features/api";
-import { validateResponseHandler, Categories } from "@/common/variables";
-import type { Genres } from "@/features/api";
+import { Categories, validateResponseHandler } from "@/common/variables";
 
 export const movieListApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
@@ -26,7 +26,7 @@ export const movieListApi = baseApi.injectEndpoints({
     getFilmById: build.query<T_MovieAllInfo, string>({
       providesTags: ["SearchMovie"],
       query: (movieId) => ({
-        url: `movie/${movieId}?language=en-US`,
+        url: `movie/${movieId}?language=en-US&include_video=true`,
       }),
       transformResponse: validateResponseHandler(movieAllInfo),
     }),
@@ -69,11 +69,18 @@ export const movieListApi = baseApi.injectEndpoints({
       }),
       transformResponse: validateResponseHandler(movieListResponseSchema),
     }),
+    getMovieVideo: build.query<MovieVideo, string>({
+      providesTags: ["MoviesList"],
+      query: (movieId) => ({
+        url: `movie/${movieId}/videos`,
+      }),
+    }),
   }),
 });
 
 export const {
   useGetSearchFilmQuery,
+  useGetMovieVideoQuery,
   useGetGenresQuery,
   useGetFilmByIdQuery,
   useGetFilmByCategoryQuery,

@@ -26,6 +26,8 @@
   margin: 0 0 10px;
 
   & button {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
     margin: 5px;
   }
 

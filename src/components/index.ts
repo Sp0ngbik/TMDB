@@ -16,3 +16,4 @@ export { default as CircleRating } from "./circleRating/CircleRating.tsx";
 export { default as CastOffer } from "./castOffer/CastOffer.tsx";
 export { default as LinearProgress } from "./linearProgress/LinearProgress.tsx";
 export { default as FilmCardSkeleton } from "./filmCardSkeleton/FilmCardSkeleton.tsx";
+export { default as WatchTrailerButton } from "./watchTrailerButton/WatchTrailerButton.tsx";

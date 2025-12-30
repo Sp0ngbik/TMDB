@@ -94,8 +94,9 @@ export const useSortValues = ({ genres }: SortValuesProps) => {
     }
   };
 
-  const activeGenre = (genre: Genre) =>
-    clsx(genresState.includes(genre.id.toString()) && s.activeGenre);
+  const activeGenre = (genre: Genre) => {
+    return clsx(genresState.includes(genre.id.toString()) && s.activeGenre);
+  };
 
   const selectionItems = [
     {

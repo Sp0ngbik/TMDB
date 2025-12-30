@@ -92,8 +92,23 @@ export const castResponseSchema = z.object({
   id: z.number(),
   cast: z.array(castSchema),
 });
+
+type MovieWithVideo = {
+  iso_639_1: string;
+  iso_3166_1: string;
+  name: string;
+  key: string;
+  site: string;
+  size: number;
+  type: string;
+  official: boolean;
+  published_at: string;
+  id: string;
+};
+
 export type MovieList = z.infer<typeof movieListResponseSchema>;
 export type Genre = z.infer<typeof genreSchema>;
 export type CastResponse = z.infer<typeof castResponseSchema>;
 export type T_MovieAllInfo = z.infer<typeof movieAllInfo>;
 export type Movie = z.infer<typeof movieSchema>;
+export type MovieVideo = { id: string; results: MovieWithVideo[] };

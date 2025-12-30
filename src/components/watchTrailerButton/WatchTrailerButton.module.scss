@@ -1,0 +1,29 @@
+.trailerShadowBox {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.47);
+  display: flex;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  z-index: 98;
+  height: 100vh;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.trailerWrapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 15px;
+  width: 50vw;
+  height: 70vh;
+  padding: 15px;
+  background-color: black;
+  outline: 2px solid var(--color-dark-100);
+  z-index: 99;
+  user-select: none;
+}

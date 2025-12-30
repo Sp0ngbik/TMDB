@@ -2,10 +2,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useGetFilmByIdQuery } from "@/features/api";
 import s from "./Movie.module.scss";
 import { useGetMovieDescription } from "./hooks/useGetMovieDescription";
-import { Button, CastOffer, CircleRating, FavoriteHeart } from "@/components";
+import {
+  Button,
+  CastOffer,
+  CircleRating,
+  FavoriteHeart,
+  WatchTrailerButton,
+} from "@/components";
 import MovieSkeleton from "./ux/movieSkeleton/MovieSkeleton.tsx";
+import { useEffect } from "react";
 
 const Movie = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
   const navigate = useNavigate();
   const { movieId } = useParams<{ movieId: string }>();
   const { data, isFetching } = useGetFilmByIdQuery(movieId || "");
@@ -72,6 +82,7 @@ const Movie = () => {
                   {name}
                 </Button>
               ))}
+              <WatchTrailerButton movieId={movieId || ""} />
             </div>
             <div className={s.movieReview}>
               {tagLine && <p>«{tagLine}»</p>}

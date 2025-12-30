@@ -4,9 +4,7 @@ import { buildImageURL } from "@/common/variables";
 
 export const useGetMovieDescription = (movie: T_MovieAllInfo | undefined) => {
   if (!movie) return null;
-
   const parts: string[] = [];
-
   if (movie?.origin_country?.[0]) {
     parts.push(movie.origin_country[0]);
   }
