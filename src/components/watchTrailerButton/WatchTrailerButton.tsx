@@ -25,7 +25,13 @@ const WatchTrailerButton = ({ movieId }: Props) => {
   return (
     <div>
       {!trailerData?.length || (
-        <Button onClick={togglePopup}>Watch trailer</Button>
+        <Button
+          className={s.trailerButton}
+          variant={"secondary"}
+          onClick={togglePopup}
+        >
+          Watch trailer
+        </Button>
       )}
       {popupToggle && (
         <div className={s.trailerShadowBox} onClick={togglePopup}>
